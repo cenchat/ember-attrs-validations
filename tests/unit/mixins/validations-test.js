@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import AttrsValidationsMixin from 'ember-attrs-validations/mixins/attrs-validations';
+import AttrsValidationsMixin from 'ember-attrs-validations/mixins/validations';
 import { module, test } from 'qunit';
 
 import sinon from 'sinon';
