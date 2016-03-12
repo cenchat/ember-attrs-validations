@@ -8,7 +8,6 @@ This addon will throw an error *only* in your test runs whenever a required attr
 Currently only supports validations for required fields.
 
 ```js
-//app/components/component.js
 import Ember from 'ember';
 import AttrsValidationsMixin from 'ember-attrs-validations/mixins/attrs-validations';
 
