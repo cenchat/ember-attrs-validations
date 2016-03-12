@@ -1,6 +1,32 @@
-# Ember-attrs-validations
+# Ember Attrs Validations
 
-This README outlines the details of collaborating on this Ember addon.
+Gone are the days where you forgot to pass an attribute from a parent to a child component.
+This addon will throw an error *only* in your test runs whenever a required attribute is undefined.
+
+## Usage
+
+Currently only supports validations for required fields.
+
+```js
+//app/components/component.js
+import Ember from 'ember';
+import AttrsValidationsMixin from 'ember-attrs-validations/mixins/attrs-validations';
+
+const {
+  Component
+} = Ember;
+
+export default Component.extend(AttrsValidationsMixin, {
+  attrValidations: {
+    firstName: {
+      isRequired: true
+    },
+    lastName: {
+      isRequired: true
+    }
+  }
+});
+```
 
 ## Installation
 
