@@ -1,6 +1,6 @@
 {
   "name": "ember-attrs-validations",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Component attrs validations for test runs",
   "directories": {
     "doc": "doc",
