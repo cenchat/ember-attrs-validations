@@ -1,7 +1,7 @@
 # Ember Attrs Validations
 
 Gone are the days where you forgot to pass an attribute from a parent to a child component.
-This addon will throw an error *only* in your test runs whenever a required attribute is undefined.
+This addon will throw an error *only* in your test runs whenever a required attribute is undefined or its type is invalid.
 
 ## Compatibility
 
