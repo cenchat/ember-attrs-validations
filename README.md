@@ -15,7 +15,7 @@ Currently only supports validations for required fields and data type.
 
 ```js
 import Ember from 'ember';
-import AttrsValidationsMixin from 'ember-attrs-validations/mixins/attrs-validations';
+import AttrsValidationsMixin from 'ember-attrs-validations/mixins/validations';
 
 const {
   Component
