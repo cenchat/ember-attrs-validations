@@ -29,13 +29,14 @@ export default Mixin.create({
       for (let attrKey in attrValidations) {
         let object = attrValidations[attrKey];
         let objectType = object.type;
+        let attrValue = this.getAttr(attrKey);
 
         if (object.isRequired) {
-          this._validateIsRequired(attrKey);
+          this._validateIsRequired(attrKey, attrValue);
         }
 
-        if (objectType) {
-          this._validateType(attrKey, objectType);
+        if (objectType && !isNone(attrValue)) {
+          this._validateType(attrKey, attrValue, objectType);
         }
       }
     }
@@ -44,24 +45,26 @@ export default Mixin.create({
   /**
    * Validate isRequired
    *
-   * @param {string} attribute Attribute to check
+   * @param {string} attrKey Attribute key
+   * @param {string} attrValue Attribute value
    */
-  _validateIsRequired(attribute) {
-    if (isNone(this.getAttr(attribute))) {
-      this._failValidation(`Required attribute ${attribute} is undefined`);
+  _validateIsRequired(attrKey, attrValue) {
+    if (isNone(attrValue)) {
+      this._failValidation(`Required attribute ${attrKey} is undefined`);
     }
   },
 
   /**
    * Validate type
    *
-   * @param {string} attribute Attribute to check
+   * @param {string} attrKey Attribute key name
+   * @param {string} attrValue Attribute value
    * @param {string} type Expected type of attribute
    */
-  _validateType(attribute, expectedType) {
-    if (typeOf(this.getAttr(attribute)) !== expectedType) {
+  _validateType(attrKey, attrValue, expectedType) {
+    if (typeOf(attrValue) !== expectedType) {
       this._failValidation(
-          `Attribute ${attribute} should be of type ${expectedType}`);
+          `Attribute ${attrKey} should be of type ${expectedType}`);
     }
   },
 
