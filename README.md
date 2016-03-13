@@ -5,7 +5,7 @@ This addon will throw an error *only* in your test runs whenever a required attr
 
 ## Usage
 
-Currently only supports validations for required fields.
+Currently only supports validations for required fields and data type.
 
 ```js
 import Ember from 'ember';
@@ -18,14 +18,35 @@ const {
 export default Component.extend(AttrsValidationsMixin, {
   attrValidations: {
     firstName: {
-      isRequired: true
+      isRequired: true,
+      type: 'string'
     },
     lastName: {
-      isRequired: true
+      isRequired: true,
+      type: 'string'
+    },
+    age: {
+      isRequired: true,
+      type: 'number'
     }
   }
 });
 ```
+
+To see what types are available, see `[Ember.typeOf](http://emberjs.com/api/classes/Ember.html#method_typeOf)`.
+
+## Caveat
+
+When your data is async, the isRequired will fail since the data originally will be undefined
+until it resolves and passes the correct value.
+
+Current workarounds:
+
+* Make sure async data resolves first before rendering component (e.g. use handlebar `if` helper).
+* Make isRequired to false since in essence, you're allowing the attr to be undefined if you use async.
+
+I don't have any plans as of the moment to seemlessly support async data. I'm open to PRs if anyone
+has a good idea on how to handle it.
 
 ## Installation
 
