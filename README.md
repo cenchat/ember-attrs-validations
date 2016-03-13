@@ -37,13 +37,13 @@ To see what types are available, see [Ember.typeOf](http://emberjs.com/api/class
 
 ## Caveat
 
-When your data is async, the isRequired will fail since the data originally will be undefined
+When your data is async, the `isRequired` will fail since the data originally will be undefined
 until it resolves and passes the correct value.
 
 Current workarounds:
 
 * Make sure async data resolves first before rendering component (e.g. use handlebar `if` helper).
-* Make isRequired to false since in essence, you're allowing the attr to be undefined if you use async.
+* Make `isRequired` to false since in essence, you're allowing the attr to be undefined if you use async.
 
 I don't have any plans as of the moment to seemlessly support async data. I'm open to PRs if anyone
 has a good idea on how to handle it.
