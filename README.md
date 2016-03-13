@@ -3,6 +3,12 @@
 Gone are the days where you forgot to pass an attribute from a parent to a child component.
 This addon will throw an error *only* in your test runs whenever a required attribute is undefined.
 
+## Compatibility
+
+Supports Ember CLI v2.4 LTS.
+
+I'm planning to support only the latest [LTS](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html) versions of Ember. I won't be doing tests for any versions other than that.
+
 ## Usage
 
 Currently only supports validations for required fields and data type.
