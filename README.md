@@ -11,7 +11,13 @@ I'm planning to support only the latest [LTS](http://emberjs.com/blog/2016/02/25
 
 ## Usage
 
-Currently only supports validations for required fields and data type.
+To install this addon using Ember CLI, use this command:
+
+```bash
+$ ember install ember-indexeddb-adapter
+```
+
+Then in your component.js:
 
 ```js
 import Ember from 'ember';
@@ -39,7 +45,7 @@ export default Component.extend(AttrsValidationsMixin, {
 });
 ```
 
-To see what types are available, see [Ember.typeOf](http://emberjs.com/api/classes/Ember.html#method_typeOf).
+Currently only supports validations for required fields and data type. To see what types are available, see [Ember.typeOf](http://emberjs.com/api/classes/Ember.html#method_typeOf).
 
 ## Caveat
 
