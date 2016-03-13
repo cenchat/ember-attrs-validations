@@ -14,7 +14,7 @@ I'm planning to support only the latest [LTS](http://emberjs.com/blog/2016/02/25
 To install this addon using Ember CLI, use this command:
 
 ```bash
-$ ember install ember-indexeddb-adapter
+$ ember install ember-attrs-validations
 ```
 
 Then in your component.js:
