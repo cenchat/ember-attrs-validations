@@ -33,7 +33,7 @@ export default Component.extend(AttrsValidationsMixin, {
 });
 ```
 
-To see what types are available, see `[Ember.typeOf](http://emberjs.com/api/classes/Ember.html#method_typeOf)`.
+To see what types are available, see [Ember.typeOf](http://emberjs.com/api/classes/Ember.html#method_typeOf).
 
 ## Caveat
 
