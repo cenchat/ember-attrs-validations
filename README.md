@@ -20,12 +20,8 @@ $ ember install ember-attrs-validations
 Then in your component.js:
 
 ```js
-import Ember from 'ember';
+import Component from 'ember-component';
 import AttrsValidationsMixin from 'ember-attrs-validations/mixins/validations';
-
-const {
-  Component
-} = Ember;
 
 export default Component.extend(AttrsValidationsMixin, {
   attrValidations: {
